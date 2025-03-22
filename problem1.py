@@ -1,4 +1,4 @@
-# Code modified from GeeksforGeeks and numpy.org reference; code debugged using Claude.ai
+# Code modified from GeeksforGeeks and scipy.org reference; code debugged using Claude.ai
 
 import numpy as np
 
