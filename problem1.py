@@ -21,14 +21,10 @@ def rectangle(n):
     # Find bounds of the kidney curve
     x_min, x_max = -0.6, 1.2 
     y_min, y_max = -0.6, 1.2
-    
-    # Grid spacing
     dx = (x_max - x_min) / n
     dy = (y_max - y_min) / n
-    
     # Area of each rectangle
     area_element = dx * dy
-    
     # Count points inside the region
     count = 0
     for i in range(n):
@@ -44,13 +40,10 @@ def rectangle(n):
 
 def trapezoidal(n_x=200, n_y=200):
     x_min, x_max = -0.6, 1.2
-    y_min, y_max = -0.6, 1.2
-    
+    y_min, y_max = -0.6, 1.2  
     dx = (x_max - x_min) / n_x
     dy = (y_max - y_min) / n_y
-    
     area = 0.0
-    
     for i in range(n_x):
         x = x_min + i * dx
         x_next = x_min + (i + 1) * dx
@@ -65,7 +58,6 @@ def trapezoidal(n_x=200, n_y=200):
             # Check if the center of the cell is in the region
             if inside_region(x_mid, y_mid):
                 area += dx * dy
-    
     return area
 
 resolution = 1000
